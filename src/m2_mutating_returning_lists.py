@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Carter Myers.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -65,6 +65,20 @@ def run_test_doubler():
     correct_arg2_after = [5, 0, 8]
     expected = [10, 0, 16]
 
+    # Test 2:
+    arg1 = [1, 0, 0, 4]
+    arg2 = [15, 1, 3]
+    correct_arg1_after = [20, -6, 40, 8]
+    correct_arg2_after = [5, 0, 8]
+    expected = [10, 0, 16]
+
+    # Test 3:
+    arg1 = [0, 0, 0, 0]
+    arg2 = [0, 0, 0]
+    correct_arg1_after = [0, 0, 0, 0]
+    correct_arg2_after = [0, 0, 0]
+    expected = [0, 0, 0]
+
     print()
     print('BEFORE the function call:')
     print('  Argument 1 is:', arg1)
@@ -103,7 +117,7 @@ def doubler(list1, list2):
         :type list2: list of int
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -111,6 +125,13 @@ def doubler(list1, list2):
     #    DIFFICULTY:      4
     #    TIME ESTIMATE:   5 minutes.
     # -------------------------------------------------------------------------
+
+    for k in range(len(list1)):
+        list1[k] = list1[k] * 2
+    list = []
+    for j in range(len(list2)):
+        list = list + [list2[j] * 2]
+    return list
 
 
 # -----------------------------------------------------------------------------
